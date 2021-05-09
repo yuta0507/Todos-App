@@ -1,3 +1,7 @@
+<?php
+$route = "/todos-app/public";
+?>
+
 @extends('layouts.app')
 
 @section('title')
@@ -18,7 +22,7 @@
               <li class="list-group-item">
                 <div class="d-flex justify-content-between align-items-center">
                     {{ $todo->name }}
-                    <a class="btn btn-primary btn-sm mr-2" href="/todos-app/public/todos/{{ $todo->id }}">
+                    <a class="btn btn-primary btn-sm mr-2" href="<?php echo $route ?>/todos/{{ $todo->id }}">
                       View
                     </a>
                 </div>

@@ -1,3 +1,6 @@
+<?php
+$route = "/todos-app/public";
+?>
 @extends('layouts.app')
 
 @section('title')
@@ -14,7 +17,18 @@
                     Create new todo
                 </div>
                 <div class="card-body">
-                    <form action="/todos-app/public/store-todos" method="POST">
+                    @if($errors->any())
+                        <div class="alert alert-danger">
+                            <ul class="list-group">
+                                @foreach($errors->all() as $error)
+                                    <li class="list-group-item">
+                                        {{ $error }}
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif    
+                    <form action="<?php echo $route ?>/store-todos" method="POST">
                         @csrf
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Name">

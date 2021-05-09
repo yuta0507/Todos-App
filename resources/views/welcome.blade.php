@@ -1,3 +1,6 @@
+<?php
+$route = "/todos-app/public";
+?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -73,7 +76,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <a href="/todos-app/public/todos">Todos</a>
+                    <a href="<?php echo $route ?>/todos">Todos</a>
                 </div>
             </div>
         </div>
