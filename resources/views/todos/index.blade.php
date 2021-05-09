@@ -22,9 +22,16 @@ $route = "/todos-app/public";
               <li class="list-group-item">
                 <div class="d-flex justify-content-between align-items-center">
                     {{ $todo->name }}
-                    <a class="btn btn-primary btn-sm mr-2" href="<?php echo $route ?>/todos/{{ $todo->id }}">
-                      View
-                    </a>
+                    <div>
+                      <a class="btn btn-primary btn-sm mr-2" href="<?php echo $route ?>/todos/{{ $todo->id }}">
+                        View
+                      </a>
+                      @if(!$todo->completed)
+                      <a class="btn btn-warning btn-sm mr-2" style="color: white" href="<?php echo $route ?>/todos/{{ $todo->id }}/complete">
+                        Complete
+                      </a>
+                      @endif
+                    </div>
                 </div>
               </li>
             </ul>

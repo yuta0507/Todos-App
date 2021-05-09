@@ -21,7 +21,8 @@ $route = "/todos-app/public";
           {{ $todo->description }}
         </div>
       </div>    
-      <a href="<?php echo $route ?>/todos/{{ $todo->id }}/edit" class="btn btn-info btn-sm my-2">Edit</a>
+      <a href="<?php echo $route ?>/todos/{{ $todo->id }}/edit" class="btn btn-info my-2">Edit</a>
+      <a href="<?php echo $route ?>/todos/{{ $todo->id }}/delete" class="btn btn-danger my-2">Delete</a>
     </div>
   </div>
 @endsection
