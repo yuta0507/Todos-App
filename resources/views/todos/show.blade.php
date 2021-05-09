@@ -1,7 +1,10 @@
+<?php
+$route = "/todos-app/public";
+?>
 @extends('layouts.app')
 
 @section('title')
-    Sigle Todo: {{ $todo->name }}
+    Single Todo: {{ $todo->name }}
 @endsection
 
 @section('content')
@@ -18,6 +21,7 @@
           {{ $todo->description }}
         </div>
       </div>    
+      <a href="<?php echo $route ?>/todos/{{ $todo->id }}/edit" class="btn btn-info btn-sm my-2">Edit</a>
     </div>
   </div>
 @endsection
