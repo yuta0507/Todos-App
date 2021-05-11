@@ -3,7 +3,9 @@
 
 ## Functions
 Create, edit, delete and complete functions here.<br>
-Complete function is to get users know if the todo is completed or not.
+Complete function is to get users to know if the todo is completed or not.
+Therefore, when you complete the todo and push the complete button,
+the button is gone and you can understand it's completed.
 
 ## Enviroment
 MAMP : 6.3<br>
